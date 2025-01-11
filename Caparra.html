@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Responsive Resume</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,11 +30,35 @@
             margin: 10px 0 0;
         }
 
+        .sidebar {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #302f2f;
+            color: #fff;
+            padding-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background: #005bb5;
+        }
+
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px 0;
+            margin-left: 270px;
+            padding: 20px;
+            transition: margin-left 0.3s;
         }
 
         .section {
@@ -74,30 +98,100 @@
             width: 100%;
             bottom: 0;
         }
+
+        .sidebar h2 {
+            margin-left: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 10px 0;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin: 5px 10px;
+                padding: 10px;
+            }
+
+            .container {
+                margin-left: 0;
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .section h2 {
+                font-size: 1.2em;
+            }
+
+            .skills li {
+                font-size: 0.9em;
+                padding: 4px 8px;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="sidebar">
+        <h2>Resume</h2>
+        <a href="Caparra.html">Christian Caparra</a>
+        <a href="index.html">John Lloyd Guevarra</a>
+        <a href="#contact">Michael De Ramos</a>
+        <a href="#contact">Jhuniel Galang</a>
+    </div>
+
     <header>
         <h1>Christian C. Caparra</h1>
         <p>Networking / Web Developer / Cybersecurity</p>
     </header>
 
     <div class="container">
-        <div class="section">
+        <div class="section" id="about">
             <h2>About Me</h2>
             <p>
-               
-
                 I am a dedicated Networking / Web Developer / Cybersecurity with a passion for crafting responsive, user-friendly websites and applications. 
                 Skilled in HTML, CSS, JavaScript, and modern frameworks, 
-                I specialize in creating seamless 
-                user experiences. I thrive on problem-solving, 
+                I specialize in creating seamless user experiences. I thrive on problem-solving, 
                 staying updated with the latest technologies, and collaborating with teams to deliver impactful digital solutions.
-
             </p>
         </div>
 
-        <div class="section">
+        <div class="section" id="skills">
+            <h2>Skills</h2>
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+                <li>Cybersecurity</li>
+                <li>Networking</li>
+                <li>React</li>
+            </ul>
+        </div>
+
+        <div class="section" id="experience">
             <h2>Experience</h2>
             <ul>
                 <li><strong>Job Title</strong> at Company Name (Year - Year)</li>
@@ -105,36 +199,25 @@
             </ul>
         </div>
 
-        <div class="section">
+        <div class="section" id="education">
             <h2>Education</h2>
             <ul>
-                <li>Bachelor of Science in Information Technology - HCC ( 2021 - Present )</li>
-                <li>High School Diploma - Pasig National High School ( 2020 - 2021 )</li>
+                <li>Bachelor of Science in Information Technology - HCC (2021 - Present)</li>
+                <li>High School Diploma - Pasig National High School (2020 - 2021)</li>
             </ul>
         </div>
 
-        <div class="section">
-            <h2>Skills</h2>
-            <ul class="skills">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>PHP</li>
-                <li>Java</li>
-            </ul>
-        </div>
-
-        <div class="section">
+        <div class="section" id="contact">
             <h2>Contact</h2>
             <p>Email: caparrachristian47@gmail.com</p>
             <p>Phone: +639942060319</p>
-            <p>Phone: +639942060319</p></a>
-            
+
+            <br>
         </div>
     </div>
 
     <footer>
-        <p> 2025, Christian Caparra</p>
+        <p>2025, Christian Caparra</p>
     </footer>
 </body>
 </html>
